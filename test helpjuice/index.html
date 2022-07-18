@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/3316cdef44.js" crossorigin="anonymous"></script>
+    <title>Helpjuice.com</title>
+  </head>
+
+  <body>
+
+    <!-- Top Navbar with Search Bar -->
+
+    <!-- Navbar links -->
+    <div class="topnav-container">
+      <div class="topnav-links">
+        <a href="#">Blog</a>
+        <a href="#">Developers</a>
+        <a href="#">Developer Blog</a>
+        <a id="mostright" href="#">Support</a>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="wrap">
+          <div class="search">
+            <div class="select" id="dropdown">
+              <p>All Products</p>
+              <img src="arrow.png" alt="down arrow">
+              <ul id="list">
+                <li class="options">All Products</li>
+                <li class="options">All Products</li>
+                <li class="options">All Products</li>
+                <li class="options">All Products</li>
+              </ul>
+            </div>
+              <input type="drop"
+              <input type="text" class="searchTerm">
+              <button type="submit" class="searchButton">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+          </div>
+      </div>
+    </div>
+
+
+    <!-- Header -->
+    <div class="header-container">
+      <div class="header-content-container">
+        <p id="home-text">Home</p>
+        <i class="fa-solid fa-angle-right"></i>
+        <p id="getstart-text">Getting Started</p>
+      </div>
+    </div>
+
+
+    <!-- Content / Getting Started -->
+  <div class="cont1">
+
+    <!-- Side Nav menu-->
+    <div class="sidebar-container">
+      <div id="gstart-dd" class="toggle">
+      <p>Getting Started</p>
+      <i class="fa-solid fa-caret-right"></i>
+        <ul id="gstart-ddmenu">
+          <li class="options">User Guides</li>
+          <li class="options">Developer</li>
+          <li class="options">Release Notes</li>
+        </ul>
+      </div>
+      <div id="tab2" class="tab2">
+        <p>Personalization</p>
+        <i id="tab2-arr" class="fa-solid fa-caret-right"></i>
+      </div>
+      </div>
+
+      <!-- Getting Started Page -->
+
+      <div class="gs">
+        <h1>Getting Started</h1>
+
+        <div class="boxes">
+          <div class="box1">
+            <img src="documents.png" height="100px" width="100px">
+            <div class="texts1">
+              <p id="title">User Guide</p>
+              <p>We're a new category, with lots of useful information.</p>
+            </div>
+          </div>
+          <div class="box2">
+            <img src="codes.png" height="100px" width="100px">
+            <div class="texts2">
+              <p id="title">Developer</p>
+              <p>We're a new category, with lots of useful information.</p>
+            </div>
+          </div>
+          <div class="box3">
+
+            <img src="megaphone.png" height="100px" width="100px">
+            <div class="texts3">
+              <p id="title">Release Notes</p>
+              <p>We're a new category, with lots of useful information.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="foot">
+        <div class="footcon">
+          <h2>Still need help?</h2>
+
+          <!-- form -->
+          <div class="name-wrap">
+            <input id="first" type="text" name="first" placeholder="First Name">
+            <input id="last" type="text" name="last" placeholder="Last Name">
+            <input id="email" type="text" name="email" placeholder="Email">
+            <div class="gs-btn"><button id="gs" type="button" name="button">Get Started</button></div>
+
+          </div>
+
+    <div class="foot-line"></div>
+
+
+    <table>
+      <tr>
+        <th>Product</th>
+        <th>Resources</th>
+        <th>Who We Are</th>
+        <th>Employee Login</th>
+      </tr>
+      <tr>
+        <td>Personalization</td>
+        <td>Blog</td>
+        <td>Who We Are</td>
+      </tr>
+      <tr>
+        <td>eCommmerce</td>
+        <td>Developer Blog</td>
+        <td>Leadership</td>
+      </tr>
+      <tr>
+        <td>Order Management</td>
+        <td>Developers</td>
+        <td>New Press</td>
+      </tr>
+      <tr>
+        <td>Point of Sale</td>
+        <td>Support</td>
+        <td>Ecommerce Awards</td>
+      </tr>
+
+    </table>
+  </div>
+</div>
+
+
+
+    <script>
+      let dropdown = document.getElementById("dropdown");
+      let list = document.getElementById("list");
+
+      dropdown.onclick = function(){
+        list.classList.toggle("open");
+      }
+
+      let tab2 = document.getElementById("tab2");
+      let gstartdd = document.getElementById("gstart-dd");
+      let gstartlist = document.getElementById("gstart-ddmenu");
+      let icon = gstartdd.querySelector(".fa-caret-right");
+
+
+      gstartdd.onclick = function(){
+
+
+        gstartlist.classList.toggle("gstartopen");
+        document.getElementById("gstart-dd").style.color = "orange";
+        document.getElementById("tab2").style.top = "70px";
+
+        if(icon.classList.contains("fa-caret-right")){
+          icon.classList.replace("fa-caret-right", "fa-caret-down");
+        }
+        else {
+          icon.classList.replace("fa-caret-down", "fa-caret-right" );
+        }
+      }
+
+    </script>
+
+  </body>
+</html>
